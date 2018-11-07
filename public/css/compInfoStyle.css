@@ -1,0 +1,27 @@
+.compInfo {
+    width: 100%;
+}
+
+.compForm {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding: 10px 0px;
+    border-top: 2px solid #5bd1fa;
+}
+
+input {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.form-group {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.saveButton {
+    width: 180px;
+}

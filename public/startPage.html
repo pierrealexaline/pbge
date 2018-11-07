@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/startStyle.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="d-flex flex-grow-1">
+            <a class="navbar-brand" href="#"><img src="img/logoNav.jpeg" alt="" style="width:100px; height:55px;"></a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#websiteNavbar"
+                        aria-controls="websiteNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="websiteNavbar">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">A propos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Nous contacter</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+<div class="connectContainer text-center">
+    <button type="button" class="connect btn btn-info btn-lg" id="userConnect"
+            data-toggle="modal" data-target="#userModal">Connection Adhérent
+    </button>
+    <button type="button" class="connect btn btn-info btn-lg" id="companyCreate"
+            data-toggle="modal" data-target="#companyModal">Connection Entreprise
+    </button>
+</div>
+
+<section id="about">
+    <h2>A propos</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</section>
+
+<section id="contactus">
+    <h2>Nous contacter</h2>
+    <div class="contactContainer text-center">
+        <form class="contact_form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="contact_address" placeholder="Nom, Prénom" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="contact_email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="message_contact" rows="5" placeholder="Votre message..."
+                          required></textarea>
+            </div>
+            <button type="submit" class="form-group btn btn-dark">Envoyer</button>
+        </form>
+    </div>
+</section>
+
+
+<!-- userModal Connect -->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userModalTitle">Connection Adhérent</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <form>
+                    <div class="form-group">
+                        <label for="userConnectEmail" style="display: none;"></label>
+                        <input type="email" class="form-control" id="userConnectEmail" placeholder="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="userConnectPassword" style="display: none;"></label>
+                        <input type="password" class="form-control" id="userConnectPassword" placeholder="Mot de Passe"
+                               required/>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Connectez-vous avec LinkedIn</button>
+                <p>OU</p>
+                <button type="button" class="connect btn btn-primary" data-dismiss="modal" id="userConnectCreate"
+                        data-toggle="modal" data-target="#userCreateModal">Créer un compte
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary">Connection</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- userModal Create User Account -->
+<div class="modal fade" id="userCreateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userCreateModalTitle">Créer un compte</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <form>
+                    <div class="form-group">
+                        <label for="userCreateEmail" style="display: none;"></label>
+                        <input type="email" class="form-control" id="userCreateEmail" placeholder="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="userCreatePassword" style="display: none;"></label>
+                        <input type="password" class="form-control" id="userCreatePassword" placeholder="Mot de Passe"
+                               required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="userCreateConfirmPassword" style="display: none;"></label>
+                        <input type="password" class="form-control" id="userCreateConfirmPassword"
+                               placeholder="Confirmer le Mot de Passe" required/>
+                    </div>
+                </form>
+                <p>OU</p>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Créer un compte avec LinkedIn
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary">Connection</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- userModal Connect -->
+<div class="modal fade" id="companyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="companyModalTitle">Connection Entreprise</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <form>
+                    <div class="form-group">
+                        <label for="companyConnectEmail" style="display: none;"></label>
+                        <input type="email" class="form-control" id="companyConnectEmail" placeholder="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyConnectPassword" style="display: none;"></label>
+                        <input type="password" class="form-control" id="companyConnectPassword"
+                               placeholder="Mot de Passe" required/>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Connectez-vous avec LinkedIn</button>
+                <p>OU</p>
+                <button type="button" class="connect btn btn-primary" data-dismiss="modal" id="companyConnectCreate"
+                        data-toggle="modal" data-target="#companyCreateModal">Créer un compte
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary">Connection</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- companyModal Create Company Account -->
+<div class="modal fade" id="companyCreateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userCompanyModalTitle">Créer un Compte Entreprise</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <form>
+                    <div class="form-group">
+                        <label for="companyCreateEmail" style="display: none;"></label>
+                        <input type="email" class="form-control" id="companyCreateEmail" placeholder="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyCreatePassword" style="display: none;"></label>
+                        <input type="password" class="form-control" id="companyCreatePassword"
+                               placeholder="Mot de Passe" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyCreateConfirmPassword" style="display: none;"></label>
+                        <input type="password" class="form-control" id="companyCreateConfirmPassword"
+                               placeholder="Confirmer le Mot de Passe" required/>
+                    </div>
+                </form>
+                <p>OU</p>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Créer un compte avec LinkedIn
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary">Connection</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <p>&copy; 2018 - Du Pays Basque aux Grandes Ecoles - Association loi 1901.</p>
+</footer>
+
+</body>
+
+</html>
